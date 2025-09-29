@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Bebas+Neue&family=Oswald:wght@200..700&family=Russo+One&display=swap" rel="stylesheet">
+    <title>TestWeb</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+    body {
+      color: #fff;
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(90deg, #ff416c, #00adb5, #ff4b2b);
+      background-size: 400% 400%;
+      animation: glitchBackground 10s infinite;
+    }
+      
+header {
+    text-align: center;
+    font-family: 'Bebas Neue', Sans-Serif;
+    padding: 20px 40px;
+    background-color: #000;
+    border-bottom: 2px solid #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    font-family: 'Russo One', Sans-Serif;
+    margin: 40px 0;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+button {
+    font-family: 'Poppins', Sans-Serif;
+    background: #2c5999;
+     color: #fff;
+    padding: 12px 24px;
+     border: 1px solid black;
+     border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover{
+    font-family: 'Poppins', Sans-Serif;
+    background: #fff;
+    color: #000;
+     transform: scale(1.15);
+}
+
+section h2 {
+    font-family: 'Oswald', Sans-Serif;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #111;
+    border-top: 2px solid #fff;
+    font-size: 0.9em;
+}
+
+.neon {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow: 0 0 10px white,
+              0 0 20px white,
+              0 0 40px white;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(250px);
+  -webkit-backdrop-filter: blur(250px);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes glitchBackground {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 100% 50%; }
+      50% { background-position: 50% 0%; }
+      75% { background-position: 0% 100%; }
+      100% { background-position: 0% 50%; }
+    }
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+    <header class="card">
+        <h1 class="fade-in card">Test</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#suggestion">Suggestion</a>
+            <a href="#test">Test</a>
+            <a href="#back">Back</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="fade-in  card neon">
+            <h2>About</h2>
+            <p>Testing</p>
+              <button class="card neon" onclick="window.open('https://youtube.com','_blank')">Go to Youtube</button>
+        </section>
+
+        <section id="suggestion" class="fade-in card neon">
+            <h2>Suggestion</h2>
+            <p>Testing</p>
+              <button class="card neon" onclick="window.open('https://www.google.com','_blank')">Go to Google</button>
+        </section>
+
+        <section id="test" class="fade-in card neon">
+            <h2>Test</h2>
+            <p>Testing</p>
+              <button class="card neon" onclick="window.open('https://tiktok.com','_blank')">Go to Tiktok</button>
+        </section>
+
+        <section id="back" class="fade-in card neon">
+            <h2>Back</h2>
+            <p>Testing</p>
+            <a href="index.html">
+              <button class="card neon">Go back</button>
+            </a>
+        </section>
+    </main>
+
+    <footer class="card">
+        <p class="card">© 2025 Test</p>
+    </footer>
+</body>
+</html>
